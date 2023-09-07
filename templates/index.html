@@ -10,8 +10,11 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        
-        
+        <ul id ="navigation">
+        {% for item in navigation %}
+            <li><a href="{{item.href}}">{{item.caption}}</a></li>
+        {%% endfor %}
+        </ul>
         <script src="" async defer></script>
     </body>
 </html>
