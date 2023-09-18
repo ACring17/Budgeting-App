@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Budgeting App</title>
-        <meta name="description" content="An application that helps users budget their monthly finances">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <ul id ="navigation">
-        {% for item in navigation %}
-            <li><a href="{{item.href}}">{{item.caption}}</a></li>
-        {% endfor %}
-        </ul>
+{% extends "base.html"%}
+{% block content %}
 
         <h1>Budgeting Made Easy</h1>
-
-        <div id="content">{% block content %}  {% endblock %}</div>
+{% endblock %}
         
-        <script src="" async defer></script>
-    </body>
-</html>
+        
