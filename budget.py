@@ -10,7 +10,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
 # Configuring the db
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir,'data.sqlite')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///'+os.path.join(basedir,'data.postgresql')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # Connecting the SQL
 db = SQLAlchemy(app)
