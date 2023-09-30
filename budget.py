@@ -27,3 +27,10 @@ class User(db.Model):
     def __init__(self, username, email):
         self.username = username
         self.email = email
+
+
+# Connecting the templates
+@app.route('/')
+def index():
+    user_logged_in = True
+    return render_template('index.html', user_logged_in=user_logged_in)
