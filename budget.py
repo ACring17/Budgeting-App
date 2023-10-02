@@ -34,3 +34,8 @@ class User(db.Model):
 def index():
     user_logged_in = True
     return render_template('index.html', user_logged_in=user_logged_in)
+
+app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
